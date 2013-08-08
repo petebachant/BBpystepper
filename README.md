@@ -32,7 +32,7 @@ $ python
 License
 -------
 
-bb_pystepper Copyright (C) 2013 Peter Bachant
+bb_pystepper Copyright (c) 2013 Peter Bachant
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
