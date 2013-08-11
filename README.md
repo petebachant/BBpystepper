@@ -1,6 +1,6 @@
 bb_pystepper
 =========
-bb_pystepper is a Python module for controlling a stepper via the BeagleBone Black. The code by default uses full-stepping.
+bb_pystepper is a Python module for controlling stepper motors with the BeagleBone Black. The code by default uses full-stepping.
 
 Dependencies
 --------
