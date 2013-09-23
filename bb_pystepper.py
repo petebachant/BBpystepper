@@ -33,19 +33,16 @@ def fullstep(pins, pin_index):
 
 
 class Stepper(object):
-    def __init__(self):
-        in1 = "P8_13"
-        in2 = "P8_14"
-        in3 = "P8_15"
-        in4 = "P8_16"
+    def __init__(self, steps_per_rev = 2048.0,
+                 pins = ["P8_13", "P8_14", "P8_14", "P8_16"]):
 
-        self.pins = [in1, in2, in3, in4]
+        self.pins = pins
         
         initialize_pins(self.pins)
         set_all_pins_low(self.pins)
         
         self.angle = 0
-        self.steps_per_rev = 2048.0
+        self.steps_per_rev = steps_per_rev
         
         # Initialize stepping mode
         self.drivemode = fullstep
