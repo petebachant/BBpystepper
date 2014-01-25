@@ -1,23 +1,23 @@
-bb_pystepper
-=========
-bb_pystepper is a Python module for controlling stepper motors with the BeagleBone Black. The code by default uses full-stepping.
-
-To-do
------
-  * Create a ``setup.py`` script and structure the repo correctly. 
+BBpystepper
+===========
+`bbpystepper` is a Python module for controlling stepper motors with the BeagleBone Black. The code by default uses full-stepping.
 
 Dependencies
---------
-  * Python 2.xx
+------------
+  * Python 2.7
   * Adafruit_BBIO
 
-## Usage
-After installing Adafruit_BBIO and downloading the bb_pystepper code to the BeagleBone (log in via SSH and then `git clone https://github.com/petebachant/bb_pystepper.git`), the module can be imported into a Python script or run from a Python interpreter. For example:
+Installation
+------------
+  * Log in via SSH and then `git clone https://github.com/petebachant/BBpystepper.git`
+  * `cd BBpystepper`
+  * `python setup.py install`
 
-```
-$ cd bb_pystepper
-$ python
->>> from bb_pystepper import Stepper
+Usage example
+-------------
+
+```python
+>>> from bbpystepper import Stepper
 >>> mystepper = Stepper()
 >>> mystepper.rotate(180, 10) # Rotates motor 180 degrees at 10 RPM
 >>> mystepper.rotate(-180, 5) # Rotates motor back 180 degrees at 5 RPM
@@ -25,7 +25,8 @@ $ python
 0.0
 ```
 
-## Notes
+Notes
+-----
 * By default the GPIO pins used are P8_13, P8_14, P8_15, and P8_16. These can be changed by modifying the Stepper.pins list.
 * By default the Stepper.steps_per_rev parameter is set to 2048 to match my motor (it has a built-in gearbox).
 * The code doesn't keep track of where it ends in the sequence of pins. It simply sets all pins low after a move. This means there could be some additional error in the Stepper.angle variable if the amount of steps moved is not divisible by 4.
