@@ -1,5 +1,5 @@
 """ 
-bb_pystepper is a Python module used to control a stepper motor via the 
+bbpystepper is a Python module used to control a stepper motor via the 
 BeagleBone
 """
 
@@ -34,7 +34,7 @@ def fullstep(pins, pin_index):
 
 class Stepper(object):
     def __init__(self, steps_per_rev = 2048.0,
-                 pins = ["P8_13", "P8_14", "P8_15", "P8_16"]):
+                 pins=["P8_13", "P8_14", "P8_15", "P8_16"]):
 
         self.pins = pins
         
@@ -70,7 +70,7 @@ class Stepper(object):
                 *360.0) % 360.0
         
         if degrees < 0:
-    		self.pins.reverse()
+            self.pins.reverse()
     	
         set_all_pins_low(self.pins)
         
