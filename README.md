@@ -32,12 +32,10 @@ Notes
 * The code doesn't keep track of where it ends in the sequence of pins. It simply sets all pins low after a move. This means there could be some additional error in the Stepper.angle variable if the amount of steps moved is not divisible by 4.
 
 
-
-
 License
 -------
 
-BBpystepper Copyright (c) 2013 Peter Bachant
+BBpystepper Copyright (c) 2013-2014 Peter Bachant
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
