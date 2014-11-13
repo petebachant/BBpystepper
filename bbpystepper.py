@@ -33,7 +33,7 @@ def fullstep(pins, pin_index):
 
 
 class Stepper(object):
-    def __init__(self, steps_per_rev = 2048.0,
+    def __init__(self, steps_per_rev=2048.0,
                  pins=["P8_13", "P8_14", "P8_15", "P8_16"]):
 
         self.pins = pins
@@ -85,7 +85,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-    
-    
-    
