@@ -8,7 +8,7 @@ setup(
     version='0.0.1',
     author='Pete Bachant',
     author_email='petebachant@gmail.com',
-    modules=['bbpystepper'],
+    py_modules=['bbpystepper'],
     scripts=[],
     url='https://github.com/petebachant/BBpystepper.git',
     license='LICENSE',
